@@ -1,0 +1,35 @@
+<div class="registration-form m-3 p-4">
+  <form [formGroup]="createbookForm">
+    <div class="row">
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Title</mat-label>
+          <input formControlName="title" matInput placeholder="title" />
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Author</mat-label>
+          <input formControlName="author" matInput placeholder="author" />
+        </mat-form-field>
+      </div>
+
+      <div class="col-md-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Publish Year</mat-label>
+          <input
+            formControlName="publishYear"
+            matInput
+            type="number"
+            placeholder="publishYear"
+          />
+        </mat-form-field>
+      </div>
+    </div>
+    <button mat-raised-button color="accent" (click)="onSubmit()">
+      Submit
+    </button>
+    <!-- <button mat-raised-button color="accent">Update</button> -->
+  </form>
+</div>
